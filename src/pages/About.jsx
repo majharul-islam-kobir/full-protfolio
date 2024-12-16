@@ -48,10 +48,10 @@ const About = () => {
             </div>
             <button className="relative overflow-hidden font-bold py-3 px-6 rounded-full border-2 text-white group ">
                 <span className="absolute inset-0 bg-yellow-600 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
-                <span className="relative z-10 flex items-center">
+                <span className="relative z-10 flex items-center pr-10">
                  DOWNLOAD 
                   <span className="ml-3"> CV</span>
-                  <span className="ml-2 transform  group-hover:rotate-0 transition-transform duration-300 ease-in-out">
+                  <span className="ml-2 transform p-4 rounded-full group-hover:rotate-0 transition-transform duration-300 ease-in-out bg-yellow-600 absolute right-[-25px]">
                   <FaDownload></FaDownload>
                   </span>
                 </span>

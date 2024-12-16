@@ -39,9 +39,9 @@ const Home = () => {
             onClick={() => navigate("/about")}
           >
             <span className="absolute inset-0 bg-yellow-600 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
-            <span className="relative z-10 flex items-center">
+            <span className="relative z-10 flex items-center pr-10">
               MORE ABOUT ME
-              <span className="ml-2 transform rotate-180 group-hover:rotate-0 transition-transform duration-300 ease-in-out">
+              <span className="bg-yellow-600 absolute right-[-25px] p-3 rounded-full ml-2 transform rotate-180 group-hover:rotate-0 transition-transform duration-300 ease-in-out">
                 ➡️
               </span>
             </span>
