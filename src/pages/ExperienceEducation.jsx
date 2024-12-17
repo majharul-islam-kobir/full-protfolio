@@ -10,50 +10,52 @@ import {
 
 const experienceData = [
   {
-    year: "2018 - PRESENT",
-    title: "WEB DEVELOPER",
+    year: "2021 - PRESENT",
+    title: "STARTING WEB DEVELOPER",
     company: "ENVATO",
     description: "Developed multiple web applications with cutting-edge technologies.",
     icon: faCode, // কোডিং আইকন
   },
   {
-    year: "2013 - 2018",
+    year: "2018 - 2021",
     title: "UI/UX DESIGNER",
     company: "THEMEFOREST",
     description: "Designed user-friendly interfaces and experiences for digital products.",
     icon: faUserTie, // ডিজাইনার আইকন
   },
   {
-    year: "2005 - 2013",
-    title: "CONSULTANT",
-    company: "VIDEOHIVE",
-    description: "Provided consultancy on various digital media and marketing strategies.",
-    icon: faBriefcase, // কনসাল্টেন্ট আইকন
+    year: "2018",
+    title: "GRAPHICS DESIGN COURSE",
+    company: "TUNIS HIGH SCHOOL",
+    description: "Completed a comprehensive course in Graphics Design, gaining expertise in visual communication, design tools, and creative project execution.",
+    icon: faSchool,
   },
+ 
 ];
 
 const educationData = [
   {
     year: "2015",
-    title: "ENGINEERING DEGREE",
-    institution: "OXFORD UNIVERSITY",
-    description: "Completed a degree in Computer Science and Engineering.",
+    title: "HAFIZ OF THE QURAN",
+    institution: " SELF-STUDY",
+    description: "Became a Hafiz of the Quran, completing the memorization of the entire Quran through dedicated study and devotion.",
     icon: faGraduationCap, // গ্রাজুয়েশন আইকন
   },
   {
-    year: "2012",
-    title: "MASTER DEGREE",
-    institution: "KIEV UNIVERSITY",
+    year: "2022 - 2023",
+    title: "GRADUATION।",
+    institution: "ISLAMIC UNIVERSITY",
+    description: "Earned a Master's degree from Islamic University, specializing in digital media and marketing strategies.",
+    icon: faBriefcase, // কনসাল্টেন্ট আইকন
+  },
+  {
+    year: "2024",
+    title: "TEACHE IN AHMAD IT SLUTION",
+    institution: "AHMAD'S EDUCATION",
     description: "Specialized in advanced software development and AI.",
     icon: faGraduationCap,
   },
-  {
-    year: "2009",
-    title: "BACHELOR DEGREE",
-    institution: "TUNIS HIGH SCHOOL",
-    description: "Completed foundational studies with excellent grades.",
-    icon: faSchool, // স্কুল আইকন
-  },
+  
 ];
 
 const TimelineCard = ({ year, title, company, description, icon }) => (
@@ -76,8 +78,8 @@ const TimelineCard = ({ year, title, company, description, icon }) => (
 const ExperienceEducation = () => {
   return (
     <div className="bg-black text-white p-10">
-      <h2 className="text-center text-5xl font-bold mb-10 uppercase ">Experience & Education</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+      <h2 className="mb-20 text-5xl font-bold uppercase ">Experience & Education</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 text-start">
         <div>
           <h3 className="text-4xl font-semibold mb-10 text-yellow-400">Experience</h3>
           {experienceData.map((exp, idx) => (

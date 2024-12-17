@@ -29,12 +29,12 @@ const Portfolio = () => {
   return (
     <div className="bg-black py-12 text-white">
       <div className="container mx-auto text-center w-10/12">
-        <h2 className="text-5xl font-bold mb-8 text-white">
+        <h2 className="text-7xl font-bold mb-10 text-white">
           MY <span className="text-yellow-400">PORTFOLIO</span>
         </h2>
 
         {/* Filter Menu */}
-        <div className="flex justify-center space-x-6 mb-8">
+        <div className="flex justify-center space-x-6 mb-10">
           <button
             className={`text-lg ${filter === 'all' ? 'text-yellow-400' : 'text-white'} hover:text-yellow-400`}
             onClick={() => setFilter('all')}

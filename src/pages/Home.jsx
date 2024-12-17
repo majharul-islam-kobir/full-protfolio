@@ -1,9 +1,14 @@
 import { useNavigate } from "react-router-dom";
-
+import image from "../asset/image/my-pic.jpg"
+import About from "./About";
+import Portfolio from "./Protfolio";
+import Blog from "./Blog";
+import Contact from "./Contact";
 const Home = () => {
   const navigate = useNavigate();
 
   return (
+    <div className="sm:text-center">
     <div className="bg-[#000] text-white min-h-screen flex items-center justify-center relative">
       {/* Yellow Background Shape */}
       <div className="absolute top-0 left-0 w-1/2 h-full bg-yellow-500 -z-10 rounded-br-[50px]"></div>
@@ -11,26 +16,24 @@ const Home = () => {
       {/* Content Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center p-8 relative z-10">
         {/* Left Side - Image */}
-        <div className="flex justify-center">
+        <div className="flex justify-center ">
           <img
-            src="https://via.placeholder.com/400"
+            src={image}
             alt="Profile"
-            className="rounded-lg shadow-lg"
+            className="rounded-full shadow-lg shadow-orange-800"
           />
         </div>
 
         {/* Right Side - Text Content */}
         <div className="space-y-6">
-          <h2 className="text-yellow-500 text-4xl font-bold">
-            — I'M STEVE MILNER.
+          <h2 className="text-yellow-500 text-start text-4xl font-bold">
+          **"I'M MAJHARUL ISLAM.
           </h2>
-          <h3 className="text-3xl md:text-5xl font-extrabold text-white">
-            WEB DESIGNER
+          <h3 className="text-3xl text-start md:text-5xl font-extrabold text-white">
+           FRONT-END DEVELOPER
           </h3>
-          <p className="text-gray-400 mr-[100px]">
-            I'm a Tunisian-based web designer & front-end developer focused on
-            crafting clean & user-friendly experiences. I am passionate about
-            building excellent software that improves the lives of those around me.
+          <p className="text-gray-400 mr-[100px] text-start">
+          I am a passionate front-end developer and web designer focused on creating clean, user-friendly, and impactful digital experiences. My goal is to build websites and applications that are accessible, engaging, and make a meaningful difference in people's lives, regardless of location
           </p>
 
           {/* Button */}
@@ -49,6 +52,11 @@ const Home = () => {
         </div>
       </div>
     </div>
+      <About />
+      <Portfolio />
+      <Blog />
+      <Contact />
+      </div>
   );
 };
 
