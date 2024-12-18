@@ -11,7 +11,8 @@ const About = () => {
   ];
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen p-10 ">
+    <div className="bg-gray-900 ">
+    <div className="container mx-auto text-white min-h-screen p-10 ">
       <div className="text-center mb-10">
         <h1 className="sm:text-7xl text-4xl font-bold mb-15">
           ABOUT <span className="text-yellow-500">ME</span>
@@ -119,8 +120,9 @@ const About = () => {
       </div>
 
       {/* Experience */}
-      <ExperienceEducation />
     </div>
+      <ExperienceEducation />
+      </div>
   );
 };
 

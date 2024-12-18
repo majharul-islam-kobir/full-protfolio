@@ -79,7 +79,8 @@ const TimelineCard = ({ year, title, company, description, icon }) => (
 
 const ExperienceEducation = () => {
   return (
-    <div className="bg-black text-white p-10">
+    <div className="bg-black">
+    <div className=" text-white p-10 container mx-auto">
       <h2 className="mb-20 sm:text-5xl text-3xl font-bold uppercase">
         Experience & Education
       </h2>
@@ -117,6 +118,7 @@ const ExperienceEducation = () => {
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 };

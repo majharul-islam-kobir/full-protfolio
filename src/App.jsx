@@ -5,7 +5,6 @@ import MainLayout from './pages/MainLayout';
 import Home from './pages/Home';
 import Protfolio from './pages/Protfolio';
 import Contact from './pages/Contact';
-import Message from './pages/Message';
 import About from './pages/About';
 import Blog from './pages/Blog';
 

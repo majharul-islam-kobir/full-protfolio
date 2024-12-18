@@ -91,7 +91,7 @@ const Portfolio = () => {
       : portfolioItems.filter((item) => item.category === filter);
 
   return (
-    <div className="bg-black py-12 text-white">
+    <div className="bg-black py-12 text-white ">
       <div className="container mx-auto text-center w-10/12">
         <h2 className="sm:text-7xl text-4xl font-bold mb-10 text-white">
           MY <span className="text-yellow-400">PORTFOLIO</span>
@@ -107,13 +107,13 @@ const Portfolio = () => {
           </button>
         </div>
 
-        {/* Filter Menu */}
+        {/* Filter Menu */} 
         <div
           className={`${
             isMenuOpen ? "block" : "hidden"
           } sm:flex justify-center sm:space-x-6 sm:mb-10 bg-black sm:bg-transparent p-4 sm:p-0 rounded-md `}
         >
-          <div className="flex flex-col items-center space-y-4">
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <button
               className={`text-lg ${
                 filter === "all" ? "text-yellow-400" : "text-white"

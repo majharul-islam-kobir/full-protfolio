@@ -8,8 +8,8 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="sm:text-center">
-    <div className="bg-[#000] text-white min-h-screen flex items-center justify-center relative">
+    <div className="sm:text-center bg-[#000]">
+    <div className="container mx-auto text-white min-h-screen flex items-center justify-center relative">
       {/* Yellow Background Shape */}
       <div className="absolute top-0 left-0 w-1/2 h-full bg-yellow-500 -z-10 rounded-br-[50px]"></div>
 
@@ -26,7 +26,7 @@ const Home = () => {
 
         {/* Right Side - Text Content */}
         <div className=" space-y-6 text-center">
-          <h2 className="text-yellow-500 sm:text-start text-4xl font-bold">
+          <h2 className="text-yellow-500 sm:text-start text-4xl sm:text-5xl font-bold">
           **"I'M MAJHARUL ISLAM.
           </h2>
           <h3 className="text-3xl sm:text-start md:text-5xl font-extrabold text-white">
