@@ -51,7 +51,7 @@ const Blog = () => {
     <div className="bg-black">
       <div className="bg-black w-10/12 mx-auto min-h-screen text-white py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-7xl font-bold text-center mb-20">
+          <h2 className="sm:text-7xl text-4xl font-bold text-center mb-20">
             MY <span className="text-yellow-400 ">BLOG</span>
           </h2>
 

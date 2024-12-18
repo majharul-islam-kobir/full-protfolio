@@ -30,7 +30,6 @@ const experienceData = [
     description: "Completed a comprehensive course in Graphics Design, gaining expertise in visual communication, design tools, and creative project execution.",
     icon: faSchool,
   },
- 
 ];
 
 const educationData = [
@@ -43,7 +42,7 @@ const educationData = [
   },
   {
     year: "2022 - 2023",
-    title: "GRADUATION।",
+    title: "GRADUATION",
     institution: "ISLAMIC UNIVERSITY",
     description: "Earned a Master's degree from Islamic University, specializing in digital media and marketing strategies.",
     icon: faBriefcase, // কনসাল্টেন্ট আইকন
@@ -55,15 +54,18 @@ const educationData = [
     description: "Specialized in advanced software development and AI.",
     icon: faGraduationCap,
   },
-  
 ];
 
 const TimelineCard = ({ year, title, company, description, icon }) => (
-  <div className="flex gap-4 mb-16 items-start">
-    <div className="bg-yellow-500 p-4 rounded-full flex-shrink-0">
-      <FontAwesomeIcon icon={icon} className="text-black text-2xl" />
+  <div className="flex sm:flex-row flex-col items-start gap-4 mb-10">
+    {/* Icon */}
+    <div className="flex-shrink-0 mb-4 sm:mb-0 flex justify-center sm:justify-start w-full sm:w-auto">
+      <div className="bg-yellow-500 p-4 rounded-full">
+        <FontAwesomeIcon icon={icon} className="text-black text-2xl" />
+      </div>
     </div>
-    <div>
+    {/* Content */}
+    <div className="text-center sm:text-left">
       <div className="bg-gray-800 text-white px-2 py-1 rounded-md inline-block mb-2 text-sm font-semibold">
         {year}
       </div>
@@ -78,12 +80,17 @@ const TimelineCard = ({ year, title, company, description, icon }) => (
 const ExperienceEducation = () => {
   return (
     <div className="bg-black text-white p-10">
-      <h2 className="mb-20 text-5xl font-bold uppercase ">Experience & Education</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 text-start">
+      <h2 className="mb-20 sm:text-5xl text-3xl font-bold uppercase">
+        Experience & Education
+      </h2>
+      <div className="sm:grid grid-cols-1 md:grid-cols-2 gap-16">
+        {/* Experience Section */}
         <div>
-          <h3 className="text-4xl font-semibold mb-10 text-yellow-400">Experience</h3>
+          <h3 className="text-4xl font-semibold mb-10 text-yellow-400">
+            Experience
+          </h3>
           {experienceData.map((exp, idx) => (
-            <TimelineCard 
+            <TimelineCard
               key={idx}
               year={exp.year}
               title={exp.title}
@@ -93,8 +100,11 @@ const ExperienceEducation = () => {
             />
           ))}
         </div>
+        {/* Education Section */}
         <div>
-          <h3 className="text-4xl font-semibold mb-10 text-yellow-400">Education</h3>
+          <h3 className="text-4xl font-semibold mb-10 text-yellow-400">
+            Education
+          </h3>
           {educationData.map((edu, idx) => (
             <TimelineCard
               key={idx}

@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div className="bg-black text-white py-12 text-start">
       <div className="w-10/12 mx-auto">
-        <h2 className="text-8xl font-bold mb-16 text-white text-center">
+        <h2 className="sm:text-8xl text-4xl font-bold mb-16 text-white text-center">
           GET IN <span className="text-yellow-400">TOUCH</span>
         </h2>
 

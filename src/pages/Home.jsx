@@ -25,14 +25,14 @@ const Home = () => {
         </div>
 
         {/* Right Side - Text Content */}
-        <div className="space-y-6">
-          <h2 className="text-yellow-500 text-start text-4xl font-bold">
+        <div className=" space-y-6 text-center">
+          <h2 className="text-yellow-500 sm:text-start text-4xl font-bold">
           **"I'M MAJHARUL ISLAM.
           </h2>
-          <h3 className="text-3xl text-start md:text-5xl font-extrabold text-white">
+          <h3 className="text-3xl sm:text-start md:text-5xl font-extrabold text-white">
            FRONT-END DEVELOPER
           </h3>
-          <p className="text-gray-400 mr-[100px] text-start">
+          <p className="text-gray-400  sm:text-start">
           I am a passionate front-end developer and web designer focused on creating clean, user-friendly, and impactful digital experiences. My goal is to build websites and applications that are accessible, engaging, and make a meaningful difference in people's lives, regardless of location
           </p>
 

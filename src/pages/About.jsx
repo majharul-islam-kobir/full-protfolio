@@ -14,7 +14,7 @@ const About = () => {
   return (
     <div className="bg-gray-900 text-white min-h-screen p-10 ">
       <div className="text-center mb-10">
-        <h1 className="text-7xl font-bold mb-15">
+        <h1 className="sm:text-7xl text-4xl font-bold mb-15">
           ABOUT <span className="text-yellow-500">ME</span>
         </h1>
       </div>
@@ -49,8 +49,8 @@ const About = () => {
               href="/src/asset/image/ProfessionalCVResume.pdf" 
               download="My_CV" 
             >
-              <button className="relative overflow-hidden font-bold py-3 px-6  rounded-full border-2 text-white group">
-                <span className="text-start absolute inset-0 bg-yellow-600 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
+              <button className="relative overflow-hidden font-bold py-3 px-6 mx-auto rounded-full border-2 text-white group">
+                <span className=" absolute inset-0 bg-yellow-600 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
                 <span className="relative z-10 flex items-center pr-10">
                   DOWNLOAD
                   <span className="ml-3"> CV</span>
@@ -75,7 +75,7 @@ const About = () => {
 
       {/* Skills */}
       <div className="text-center mb-10">
-        <h1 className="text-7xl font-bold my-20">
+        <h1 className="sm:text-7xl text-4xl font-bold my-20">
           MY <span className="text-yellow-500">SKILLS</span>
         </h1>
       </div>
