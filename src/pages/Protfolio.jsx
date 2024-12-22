@@ -10,6 +10,7 @@ import image6 from "../asset/image/restauran.png";
 import image7 from "../asset/image/small project.png";
 import image8 from "../asset/image/todo.png";
 import image9 from "../asset/image/Todo2.png";
+import image10 from "../asset/image/Screenshot 2024-12-23 010740.png";
 
 const portfolioItems = [
   {
@@ -74,6 +75,13 @@ const portfolioItems = [
     imageUrl: image9,
     link: "https://majharul-islam-kobir.github.io/majharul-islam-kobir-todo-list/",
     title: "Logo 3",
+  },
+  {
+    id: 9,
+    category: "News",
+    imageUrl: image10,
+    link: "https://super-travesseiro-ae8fd1.netlify.app/",
+    title: "The Dr",
   },
 ];
 

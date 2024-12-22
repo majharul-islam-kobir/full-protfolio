@@ -1,4 +1,3 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faBriefcase, 
@@ -57,7 +56,7 @@ const educationData = [
 ];
 
 const TimelineCard = ({ year, title, company, description, icon }) => (
-  <div className="flex sm:flex-row flex-col items-start gap-4 mb-10">
+  <div className="flex sm:flex-row flex-col items-start gap-4 mb-10 w-9/12 mx-auto">
     {/* Icon */}
     <div className="flex-shrink-0 mb-4 sm:mb-0 flex justify-center sm:justify-start w-full sm:w-auto">
       <div className="bg-yellow-500 p-4 rounded-full">

@@ -1,4 +1,3 @@
-import React from "react";
 import { FaFacebookF, FaLinkedinIn, FaGithub, FaYoutube } from "react-icons/fa";
 
 const Contact = () => {
@@ -65,7 +64,7 @@ const Contact = () => {
             {/* Social Icons */}
             <div className="flex space-x-4 mt-6">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/majharul.islam.kobir.2024/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-2xl text-white hover:text-yellow-400"
@@ -73,7 +72,7 @@ const Contact = () => {
                 <FaFacebookF />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/majharul-islam-0345b7322/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-2xl text-white hover:text-yellow-400"
