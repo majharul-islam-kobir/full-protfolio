@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faBars} from "@fortawesome/free-solid-svg-icons";
 import image1 from "../asset/image/Screenshot 2024-12-16 155428.png";
 import image2 from "../asset/image/Screenshot 2024-12-16 171010.png";
 import image3 from "../asset/image/protfolio.png";
@@ -11,8 +11,19 @@ import image7 from "../asset/image/small project.png";
 import image8 from "../asset/image/todo.png";
 import image9 from "../asset/image/Todo2.png";
 import image10 from "../asset/image/Screenshot 2024-12-23 010740.png";
+import image11 from "../asset/image/ecom.png";
+import image12 from "../asset/image/jog.png";
+import image13 from "../asset/image/student.png";
+import image14 from "../asset/image/server.png";
 
 const portfolioItems = [
+  {
+    id: 2,
+    category: "Protfolio",
+    imageUrl: image2,
+    link: "https://jovial-starburst-51746b.netlify.app/",
+    title: "Protfolio",
+  },
   {
     id: 1,
     category: "E-Commerce",
@@ -21,11 +32,26 @@ const portfolioItems = [
     title: "Book Selling",
   },
   {
-    id: 2,
-    category: "Protfolio",
-    imageUrl: image2,
-    link: "https://jovial-starburst-51746b.netlify.app/",
-    title: "Protfolio",
+    id: 11,
+    category: "News",
+    imageUrl: image11,
+    link: "https://ecomproject-2f2h.vercel.app/",
+    title: "The Dr",
+  },
+
+  {
+    id: 13,
+    category: "Student",
+    imageUrl: image13,
+    link: "https://stupendous-quokka-eea1bf.netlify.app/",
+    title: "student counter",
+  },
+  {
+    id: 12,
+    category: "joge",
+    imageUrl: image12,
+    link: "https://electric-jog.vercel.app/",
+    title: "Ela",
   },
   {
     id: 3,
@@ -56,6 +82,13 @@ const portfolioItems = [
     title: "Restauran",
   },
   {
+    id: 14,
+    category: "MOCKUP",
+    imageUrl: image14,
+    link: "https://majharul-islam-kobir.github.io/AFFORDABLE/index.html",
+    title: "Server",
+  },
+  {
     id: 7,
     category: "graphic",
     imageUrl: image7,
@@ -77,7 +110,7 @@ const portfolioItems = [
     title: "Logo 3",
   },
   {
-    id: 9,
+    id: 10,
     category: "News",
     imageUrl: image10,
     link: "https://super-travesseiro-ae8fd1.netlify.app/",
@@ -115,7 +148,7 @@ const Portfolio = () => {
           </button>
         </div>
 
-        {/* Filter Menu */} 
+        {/* Filter Menu */}
         <div
           className={`${
             isMenuOpen ? "block" : "hidden"

@@ -1,12 +1,43 @@
-import { FaFacebookF, FaLinkedinIn, FaGithub, FaYoutube } from "react-icons/fa";
+import React, { useState } from "react";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaGithub,
+  FaYoutube,
+} from "react-icons/fa";
 
 const Contact = () => {
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending...");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "2ee6b958-d583-48db-a0ea-2e85fc394532")
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
   return (
-    <div className="bg-black text-white  text-start">
+    <div className="bg-black text-white text-start ">
       <div className="w-10/12 container mx-auto">
-      <h2 className="sm:text-8xl text-4xl font-bold mb-16 mt-0 text-white text-center">
-  GET IN <span className="text-yellow-400">TOUCH</span>
-</h2>
+        <h2 className="sm:text-8xl text-4xl font-bold mb-16 mt-0 text-white text-center">
+          GET IN <span className="text-yellow-400">TOUCH</span>
+        </h2>
 
         {/* Contact Section */}
         <div className="flex flex-wrap justify-between items-start">
@@ -33,7 +64,6 @@ const Contact = () => {
               </div>
             </div>
 
-
             <div className="mb-4 flex items-center">
               <span className="text-yellow-400 text-2xl mr-4">📧</span>
               <div>
@@ -55,12 +85,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Email */}
-           
-
-            {/* Phone */}
-            
-
             {/* Social Icons */}
             <div className="flex space-x-4 mt-6">
               <a
@@ -80,7 +104,7 @@ const Contact = () => {
                 <FaLinkedinIn />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/majharul-islam-kobir"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-2xl text-white hover:text-yellow-400"
@@ -88,7 +112,7 @@ const Contact = () => {
                 <FaGithub />
               </a>
               <a
-                href="https://youtube.com"
+                href="www.youtube.com/@majharulislam7852"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-2xl text-white hover:text-yellow-400"
@@ -100,17 +124,21 @@ const Contact = () => {
 
           {/* Right Side: Contact Form */}
           <div className="w-full md:w-1/2">
-            <form className="space-y-6">
+            <form onSubmit={onSubmit} className="space-y-6">
               {/* Name & Email */}
               <div className="flex space-x-4">
                 <input
                   type="text"
+                  name="name"
                   placeholder="YOUR NAME"
+                  required
                   className="w-1/2 p-4 bg-gray-800 text-white rounded-lg focus:outline-none"
                 />
                 <input
                   type="email"
+                  name="email"
                   placeholder="YOUR EMAIL"
+                  required
                   className="w-1/2 p-4 bg-gray-800 text-white rounded-lg focus:outline-none"
                 />
               </div>
@@ -118,13 +146,17 @@ const Contact = () => {
               {/* Subject */}
               <input
                 type="text"
+                name="subject"
                 placeholder="YOUR SUBJECT"
+                required
                 className="w-full p-4 bg-gray-800 text-white rounded-lg focus:outline-none"
               />
 
               {/* Message */}
               <textarea
+                name="message"
                 placeholder="YOUR MESSAGE"
+                required
                 className="w-full p-4 bg-gray-800 text-white rounded-lg focus:outline-none h-32"
               ></textarea>
 
@@ -142,6 +174,7 @@ const Contact = () => {
                 </span>
               </button>
             </form>
+            <span className="block mt-4 text-yellow-400 mb-10">{result}</span>
           </div>
         </div>
       </div>
