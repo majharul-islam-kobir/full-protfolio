@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars} from "@fortawesome/free-solid-svg-icons";
 import image1 from "../asset/image/Screenshot 2024-12-16 155428.png";
@@ -118,9 +119,12 @@ const portfolioItems = [
   },
 ];
 
+
+
 const Portfolio = () => {
   const [filter, setFilter] = useState("all");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [visibleItems, setVisibleItems] = useState(6); // Start with 6 items
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -131,8 +135,12 @@ const Portfolio = () => {
       ? portfolioItems
       : portfolioItems.filter((item) => item.category === filter);
 
+  const handleLoadMore = () => {
+    setVisibleItems((prev) => prev + 3); // Load 3 more items
+  };
+
   return (
-    <div className="bg-black py-12 text-white ">
+    <div className="bg-black py-12 text-white">
       <div className="container mx-auto text-center w-10/12">
         <h2 className="sm:text-7xl text-4xl font-bold mb-10 text-white">
           MY <span className="text-yellow-400">PORTFOLIO</span>
@@ -200,13 +208,16 @@ const Portfolio = () => {
 
         {/* Portfolio Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {filteredItems.map((item) => (
-            <a
+          {filteredItems.slice(0, visibleItems).map((item) => (
+            <motion.a
               key={item.id}
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-amber-400 rounded-lg overflow-hidden block"
+              initial={{ opacity: 0, x: -100 }} // Initial position (offscreen left)
+              animate={{ opacity: 1, x: 0 }} // Final position (visible)
+              transition={{ duration: 0.5 }} // Duration of the animation
             >
               <img
                 src={item.imageUrl}
@@ -215,9 +226,22 @@ const Portfolio = () => {
               />
               <p className="text-2xl font-bold">{item.category}</p>
               <p className="text-2xl font-bold">{item.title}</p>
-            </a>
+            </motion.a>
           ))}
         </div>
+
+        {/* Load More Button */}
+        {visibleItems < filteredItems.length && (
+          <motion.button
+            onClick={handleLoadMore}
+            className="mt-8 px-6 py-2 bg-yellow-400 text-black font-bold rounded-md hover:bg-yellow-500 transition-all"
+            initial={{ opacity: 0 }} // Initially hidden
+            animate={{ opacity: 1 }} // Fade in effect
+            transition={{ duration: 0.5 }}
+          >
+            Load More
+          </motion.button>
+        )}
       </div>
     </div>
   );

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Modal from "../pages/Modal2";
-import image from "../asset/image/istockphoto-1387459509-2048x2048.jpg"
+import image from "../asset/image/istockphoto-1387459509-2048x2048.jpg";
+import { motion } from "framer-motion";
 
 const blogPosts = [
   {
     id: 1,
-    image:image,
+    image: image,
     title: "Cox's Bazar's Joyful Journey",
     description:
       "Cox's Bazar, located in southeastern Bangladesh, is renowned for having the world's longest natural sandy beach, stretching over 120 kilometers along the Bay of Bengal. Recently, I had the privilege of visiting this breathtaking destination, and the experience was nothing short of magical.",
@@ -36,6 +37,7 @@ const blogPosts = [
 const Blog = () => {
   const [selectedPost, setSelectedPost] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [visiblePosts, setVisiblePosts] = useState(6);
 
   const openModal = (post) => {
     setSelectedPost(post);
@@ -47,19 +49,30 @@ const Blog = () => {
     setSelectedPost(null);
   };
 
+  const handleLoadMore = () => {
+    setVisiblePosts((prev) => prev + 3);
+  };
+
   return (
     <div className="bg-black">
       <div className="bg-black w-10/12 mx-auto min-h-screen text-white py-12">
         <div className="container mx-auto px-4">
           <h2 className="sm:text-7xl text-4xl font-bold text-center mb-20">
-            MY <span className="text-yellow-400 ">BLOG</span>
+            MY <span className="text-yellow-400">BLOG</span>
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {blogPosts.map((post) => (
-              <div
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            {blogPosts.slice(0, visiblePosts).map((post) => (
+              <motion.div
                 key={post.id}
-                className="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform"
+                className="bg-gray-800 rounded-lg shadow-lg overflow-hidden"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
                 <img
                   src={post.image}
@@ -68,15 +81,11 @@ const Blog = () => {
                 />
                 <div className="p-4">
                   <h3 className="text-2xl font-bold mb-2">{post.title}</h3>
-                  
-                  {/* বর্ণনার অংশ বিশেষ দেখানো */}
                   <p className="text-gray-300 mb-4">
                     {post.description.length > 100
                       ? `${post.description.substring(0, 100)}...`
                       : post.description}
                   </p>
-
-                  {/* রিড মোর বাটন */}
                   <button
                     onClick={() => openModal(post)}
                     className="text-yellow-400 font-semibold hover:underline"
@@ -84,13 +93,25 @@ const Blog = () => {
                     Read More →
                   </button>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
+
+          {visiblePosts < blogPosts.length && (
+            <div className="text-center mt-8">
+              <motion.button
+                onClick={handleLoadMore}
+                className="px-6 py-2 bg-yellow-400 text-black font-bold rounded-md hover:bg-yellow-500 transition-all"
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.1 }}
+              >
+                Load More
+              </motion.button>
+            </div>
+          )}
         </div>
       </div>
 
-      {/* Modal Component */}
       <Modal
         isOpen={isModalOpen}
         onClose={closeModal}
