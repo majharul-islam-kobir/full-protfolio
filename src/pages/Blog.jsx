@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import Modal from "../pages/Modal2";
 import image from "../asset/image/istockphoto-1387459509-2048x2048.jpg";
 import { motion } from "framer-motion";
