@@ -16,14 +16,22 @@ import image11 from "../asset/image/ecom.png";
 import image12 from "../asset/image/jog.png";
 import image13 from "../asset/image/student.png";
 import image14 from "../asset/image/server.png";
+import image15 from "../asset/image/e-commerce.png";
 
 const portfolioItems = [
+  {
+    id: 15,
+    category: "News",
+    imageUrl: image15,
+    link: "https://jovial-starburst-51746b.netlify.app/",
+    title: "The Dr",
+  },
   {
     id: 2,
     category: "Protfolio",
     imageUrl: image2,
     link: "https://jovial-starburst-51746b.netlify.app/",
-    title: "Protfolio",
+    title: "My Protfolio",
   },
   {
     id: 1,
@@ -116,7 +124,8 @@ const portfolioItems = [
     imageUrl: image10,
     link: "https://super-travesseiro-ae8fd1.netlify.app/",
     title: "The Dr",
-  },
+  }
+  
 ];
 
 
