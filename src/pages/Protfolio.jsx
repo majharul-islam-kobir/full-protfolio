@@ -42,11 +42,19 @@ const portfolioItems = [
   },
   {
     id: 11,
-    category: "News",
+    category: "e-commerce",
     imageUrl: image11,
     link: "https://ecomproject-2f2h.vercel.app/",
+    title: "product",
+  },
+  {
+    id: 10,
+    category: "News",
+    imageUrl: image10,
+    link: "https://super-travesseiro-ae8fd1.netlify.app/",
     title: "The Dr",
   },
+  
 
   {
     id: 13,
@@ -118,13 +126,7 @@ const portfolioItems = [
     link: "https://majharul-islam-kobir.github.io/majharul-islam-kobir-todo-list/",
     title: "Logo 3",
   },
-  {
-    id: 10,
-    category: "News",
-    imageUrl: image10,
-    link: "https://super-travesseiro-ae8fd1.netlify.app/",
-    title: "The Dr",
-  }
+  
   
 ];
 
