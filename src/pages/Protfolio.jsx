@@ -23,7 +23,7 @@ const portfolioItems = [
     id: 15,
     category: "News",
     imageUrl: image15,
-    link: "https://jovial-starburst-51746b.netlify.app/",
+    link: "https://lnkd.in/eB5tQqD8",
     title: "The Dr",
   },
   {
