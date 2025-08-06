@@ -21,10 +21,10 @@ import image15 from "../asset/image/e-commerce.png";
 const portfolioItems = [
   {
     id: 15,
-    category: "News",
+    category: "E-commerce",
     imageUrl: image15,
-    link: "https://lnkd.in/eB5tQqD8",
-    title: "The Dr",
+    link: "https://majhar-shop-9e7d04.netlify.app/",
+    title: "product selling",
   },
   {
     id: 2,
